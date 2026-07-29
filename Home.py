@@ -487,7 +487,7 @@ st.html(
         <p>
             Placement Prediction System
             <span></span>
-            Student Machine Learning Project
+            Created by Ritik Kumar (Marsal)
         </p>
     </footer>
     """
