@@ -152,7 +152,8 @@ with st.form("prediction_form"):
 
     submitted = st.form_submit_button(
         "Predict Placement",
-        use_container_width=True
+        use_container_width=True,
+        type="primary"
     )
 
 
