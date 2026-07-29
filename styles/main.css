@@ -1,0 +1,1496 @@
+/* Main page width and spacing */
+.block-container {
+    max-width: 1400px;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+}
+
+/* Main headings */
+h1 {
+    font-weight: 750;
+    letter-spacing: -0.03em;
+}
+
+h2,
+h3 {
+    font-weight: 650;
+}
+
+/* Paragraph styling */
+p {
+    line-height: 1.7;
+}
+
+/* Metric cards */
+[data-testid="stMetric"] {
+    background: linear-gradient(
+        145deg,
+        rgba(20, 32, 51, 0.96),
+        rgba(12, 24, 40, 0.96)
+    );
+
+    border: 1px solid #26354d;
+    border-radius: 16px;
+    padding: 1.2rem;
+    min-height: 125px;
+}
+
+/* Metric labels */
+[data-testid="stMetricLabel"] {
+    color: #94a3b8;
+}
+
+/* Metric values */
+[data-testid="stMetricValue"] {
+    color: #f8fafc;
+    font-weight: 700;
+}
+
+/* Form container */
+[data-testid="stForm"] {
+    background-color: rgba(15, 27, 45, 0.7);
+    border: 1px solid #26354d;
+    border-radius: 18px;
+    padding: 1.5rem;
+}
+
+/* Buttons */
+.stButton > button,
+[data-testid="stFormSubmitButton"] > button {
+    min-height: 46px;
+    border: none;
+    font-weight: 700;
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.stButton > button:hover,
+[data-testid="stFormSubmitButton"] > button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 22px rgba(34, 211, 238, 0.2);
+}
+
+/* Dataframe */
+[data-testid="stDataFrame"] {
+    border: 1px solid #26354d;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+/* Sidebar navigation */
+[data-testid="stSidebarNav"] a {
+    border-radius: 10px;
+    margin-bottom: 0.35rem;
+}
+
+[data-testid="stSidebarNav"] a:hover {
+    background-color: rgba(34, 211, 238, 0.08);
+}
+
+/* Divider */
+hr {
+    border-color: #26354d;
+}
+
+/* =========================================================
+   OVERVIEW HERO CONTAINER
+   ========================================================= */
+
+.st-key-overview_hero {
+    position: relative;
+    isolation: isolate;
+
+    width: 100%;
+    min-height: 610px;
+
+    margin-top: 0.75rem;
+    padding: clamp(2rem, 4.5vw, 4.5rem);
+
+    overflow: hidden;
+
+    border: 1px solid rgba(56, 189, 248, 0.15);
+    border-radius: 30px;
+
+    background:
+        radial-gradient(
+            circle at 84% 45%,
+            rgba(34, 211, 238, 0.095),
+            transparent 29%
+        ),
+        radial-gradient(
+            circle at 5% 8%,
+            rgba(14, 165, 233, 0.09),
+            transparent 24%
+        ),
+        linear-gradient(
+            135deg,
+            rgba(9, 22, 40, 0.99),
+            rgba(6, 16, 29, 0.98)
+        );
+
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.03);
+}
+
+
+/* Top-left decorative glow */
+
+.st-key-overview_hero::before {
+    content: "";
+
+    position: absolute;
+    z-index: -1;
+
+    width: 430px;
+    height: 430px;
+
+    top: -240px;
+    left: -190px;
+
+    border-radius: 50%;
+
+    background: rgba(34, 211, 238, 0.1);
+
+    filter: blur(95px);
+
+    pointer-events: none;
+}
+
+
+/* Bottom-right decorative glow */
+
+.st-key-overview_hero::after {
+    content: "";
+
+    position: absolute;
+    z-index: -1;
+
+    width: 360px;
+    height: 360px;
+
+    right: -170px;
+    bottom: -240px;
+
+    border-radius: 50%;
+
+    background: rgba(14, 165, 233, 0.075);
+
+    filter: blur(85px);
+
+    pointer-events: none;
+}
+
+
+/* Keep all hero content above decorative layers */
+
+.st-key-overview_hero > div {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* Prevent Streamlit HTML containers from creating odd widths */
+
+.st-key-overview_hero [data-testid="stHtml"] {
+    width: 100%;
+}
+
+
+.st-key-overview_hero [data-testid="stHtml"] > div {
+    width: 100%;
+}
+
+
+/* Control spacing inside hero */
+
+.st-key-overview_hero [data-testid="stVerticalBlock"] {
+    gap: 1.25rem;
+}
+
+
+/* Remove unnecessary margin from hero columns */
+
+.st-key-overview_hero [data-testid="stHorizontalBlock"] {
+    align-items: center;
+}
+
+
+/* =========================================================
+   HERO TEXT
+   ========================================================= */
+
+.hero-copy {
+    position: relative;
+    z-index: 3;
+
+    width: 100%;
+    max-width: 700px;
+}
+
+
+.hero-eyebrow {
+    width: fit-content;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+
+    margin-bottom: 1.4rem;
+    padding: 0.56rem 0.95rem;
+
+    color: #67e8f9;
+
+    font-size: 0.74rem;
+    font-weight: 750;
+    letter-spacing: 0.16em;
+    line-height: 1.2;
+
+    border: 1px solid rgba(34, 211, 238, 0.24);
+    border-radius: 999px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(34, 211, 238, 0.09),
+            rgba(14, 165, 233, 0.04)
+        );
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.04),
+        0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+
+.hero-eyebrow-dot {
+    width: 7px;
+    height: 7px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #22d3ee;
+
+    box-shadow:
+        0 0 0 4px rgba(34, 211, 238, 0.11),
+        0 0 15px rgba(34, 211, 238, 0.85);
+
+    animation: heroDotPulse 2.2s ease-in-out infinite;
+}
+
+
+.hero-title {
+    width: 100%;
+    max-width: 760px;
+
+    margin: 0 0 1.35rem;
+
+    color: #f8fafc;
+
+    font-size: clamp(3rem, 5.4vw, 5.2rem);
+    font-weight: 820;
+    letter-spacing: -0.055em;
+    line-height: 0.99;
+}
+
+
+.hero-title span {
+    display: block;
+
+    color: #22d3ee;
+
+    text-shadow:
+        0 0 28px rgba(34, 211, 238, 0.16);
+}
+
+
+.hero-description {
+    width: 100%;
+    max-width: 650px;
+
+    margin: 0;
+
+    color: #a9b8cc;
+
+    font-size: clamp(1rem, 1.25vw, 1.14rem);
+    font-weight: 400;
+    line-height: 1.78;
+}
+
+
+/* =========================================================
+   HERO BUTTON
+   ========================================================= */
+
+.st-key-overview_hero
+.st-key-hero_prediction_button {
+    width: fit-content;
+}
+
+
+.st-key-overview_hero
+.st-key-hero_prediction_button
+button {
+    width: auto;
+    min-height: 54px;
+
+    padding: 0.72rem 1.45rem;
+
+    color: #031117;
+
+    font-size: 0.96rem;
+    font-weight: 780;
+    letter-spacing: 0.01em;
+
+    border: 1px solid rgba(165, 243, 252, 0.8);
+    border-radius: 14px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #67e8f9 0%,
+            #22d3ee 55%,
+            #06b6d4 100%
+        );
+
+    box-shadow:
+        0 12px 30px rgba(34, 211, 238, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.28);
+
+    transition:
+        transform 180ms ease,
+        box-shadow 180ms ease,
+        filter 180ms ease,
+        border-color 180ms ease;
+}
+
+
+.st-key-overview_hero
+.st-key-hero_prediction_button
+button p {
+    color: #031117;
+}
+
+
+.st-key-overview_hero
+.st-key-hero_prediction_button
+button:hover {
+    color: #031117;
+
+    border-color: #cffafe;
+
+    filter: brightness(1.07);
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 16px 38px rgba(34, 211, 238, 0.29),
+        0 0 26px rgba(34, 211, 238, 0.11);
+}
+
+
+.st-key-overview_hero
+.st-key-hero_prediction_button
+button:hover p {
+    color: #031117;
+}
+
+
+.st-key-overview_hero
+.st-key-hero_prediction_button
+button:active {
+    transform: translateY(-1px) scale(0.985);
+}
+
+
+.st-key-overview_hero
+.st-key-hero_prediction_button
+button:focus {
+    color: #031117;
+
+    border-color: #cffafe;
+
+    box-shadow:
+        0 0 0 3px rgba(34, 211, 238, 0.17),
+        0 14px 32px rgba(34, 211, 238, 0.24);
+}
+
+
+/* =========================================================
+   HERO SUPPORTING TEXT
+   ========================================================= */
+
+
+
+.hero-support-divider {
+    width: 4px;
+    height: 4px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: rgba(34, 211, 238, 0.7);
+
+    box-shadow: 0 0 8px rgba(34, 211, 238, 0.45);
+}
+
+
+/* =========================================================
+   HERO LOGO AREA
+   ========================================================= */
+
+.hero-logo-area {
+    position: relative;
+
+    width: min(100%, 520px);
+    min-height: 460px;
+
+    margin-inline: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    perspective: 1100px;
+    transform-style: preserve-3d;
+}
+
+
+/* Grid behind logo */
+
+.hero-logo-grid {
+    position: absolute;
+    inset: 7%;
+
+    opacity: 0.17;
+
+    border-radius: 50%;
+
+    background-image:
+        linear-gradient(
+            rgba(34, 211, 238, 0.18) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(34, 211, 238, 0.18) 1px,
+            transparent 1px
+        );
+
+    background-size: 28px 28px;
+
+    mask-image:
+        radial-gradient(
+            circle,
+            #000 10%,
+            transparent 68%
+        );
+
+    -webkit-mask-image:
+        radial-gradient(
+            circle,
+            #000 10%,
+            transparent 68%
+        );
+
+    animation: heroGridMove 12s linear infinite;
+}
+
+
+/* Cyan glow behind logo */
+
+.hero-logo-glow {
+    position: absolute;
+
+    width: min(76%, 370px);
+    aspect-ratio: 1;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(103, 232, 249, 0.3) 0%,
+            rgba(34, 211, 238, 0.15) 30%,
+            rgba(8, 145, 178, 0.055) 53%,
+            transparent 72%
+        );
+
+    filter: blur(25px);
+
+    animation: heroGlowPulse 4.5s ease-in-out infinite;
+}
+
+
+/* Floating logo wrapper */
+
+.hero-logo-float {
+    position: relative;
+    z-index: 4;
+
+    width: min(78%, 390px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transform-style: preserve-3d;
+
+    animation: heroLogoFloat 5.5s ease-in-out infinite;
+}
+
+
+/* Small 3D rotation */
+
+.hero-logo-tilt {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transform-style: preserve-3d;
+
+    animation: heroLogoTilt 8s ease-in-out infinite;
+}
+
+
+/* Actual logo image */
+
+.hero-logo-image {
+    display: block;
+
+    width: 100%;
+    max-width: 390px;
+    height: auto;
+
+    object-fit: contain;
+
+    background: transparent;
+
+    filter:
+        drop-shadow(0 24px 30px rgba(0, 0, 0, 0.38))
+        drop-shadow(0 0 20px rgba(34, 211, 238, 0.19));
+
+    transform: translateZ(45px);
+
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   ORBIT RINGS
+   ========================================================= */
+
+.hero-logo-orbit {
+    position: absolute;
+
+    border: 1px solid rgba(34, 211, 238, 0.14);
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+
+.hero-logo-orbit-one {
+    width: 380px;
+    height: 380px;
+
+    transform: rotateX(67deg) rotateZ(-13deg);
+
+    animation: heroOrbitOne 14s linear infinite;
+}
+
+
+.hero-logo-orbit-two {
+    width: 300px;
+    height: 300px;
+
+    border-style: dashed;
+    border-color: rgba(103, 232, 249, 0.12);
+
+    transform: rotateY(66deg) rotateZ(22deg);
+
+    animation: heroOrbitTwo 18s linear infinite reverse;
+}
+
+
+/* =========================================================
+   FLOATING PARTICLES
+   ========================================================= */
+
+.hero-floating-particle {
+    position: absolute;
+    z-index: 2;
+
+    display: block;
+
+    border-radius: 50%;
+
+    background: #22d3ee;
+
+    box-shadow: 0 0 16px rgba(34, 211, 238, 0.8);
+}
+
+
+.particle-one {
+    width: 6px;
+    height: 6px;
+
+    top: 22%;
+    left: 16%;
+
+    animation: heroParticleFloat 4s ease-in-out infinite;
+}
+
+
+.particle-two {
+    width: 4px;
+    height: 4px;
+
+    top: 30%;
+    right: 15%;
+
+    opacity: 0.7;
+
+    animation: heroParticleFloat 5.5s ease-in-out infinite 0.8s;
+}
+
+
+.particle-three {
+    width: 5px;
+    height: 5px;
+
+    right: 25%;
+    bottom: 22%;
+
+    opacity: 0.55;
+
+    animation: heroParticleFloat 4.8s ease-in-out infinite 1.3s;
+}
+
+
+/* =========================================================
+   HERO ANIMATIONS
+   ========================================================= */
+
+@keyframes heroLogoFloat {
+    0%,
+    100% {
+        transform: translateY(0) scale(1);
+    }
+
+    50% {
+        transform: translateY(-18px) scale(1.015);
+    }
+}
+
+
+@keyframes heroLogoTilt {
+    0%,
+    100% {
+        transform:
+            rotateX(2deg)
+            rotateY(-5deg)
+            rotateZ(-1deg);
+    }
+
+    25% {
+        transform:
+            rotateX(-2deg)
+            rotateY(4deg)
+            rotateZ(1deg);
+    }
+
+    50% {
+        transform:
+            rotateX(3deg)
+            rotateY(7deg)
+            rotateZ(0deg);
+    }
+
+    75% {
+        transform:
+            rotateX(-1deg)
+            rotateY(-3deg)
+            rotateZ(-1deg);
+    }
+}
+
+
+@keyframes heroGlowPulse {
+    0%,
+    100% {
+        opacity: 0.66;
+        transform: scale(0.96);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.08);
+    }
+}
+
+
+@keyframes heroDotPulse {
+    0%,
+    100% {
+        opacity: 0.65;
+        transform: scale(0.9);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.15);
+    }
+}
+
+
+@keyframes heroGridMove {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 28px 28px;
+    }
+}
+
+
+@keyframes heroOrbitOne {
+    from {
+        transform:
+            rotateX(67deg)
+            rotateZ(-13deg)
+            rotate(0deg);
+    }
+
+    to {
+        transform:
+            rotateX(67deg)
+            rotateZ(-13deg)
+            rotate(360deg);
+    }
+}
+
+
+@keyframes heroOrbitTwo {
+    from {
+        transform:
+            rotateY(66deg)
+            rotateZ(22deg)
+            rotate(0deg);
+    }
+
+    to {
+        transform:
+            rotateY(66deg)
+            rotateZ(22deg)
+            rotate(360deg);
+    }
+}
+
+
+@keyframes heroParticleFloat {
+    0%,
+    100% {
+        opacity: 0.4;
+        transform: translateY(0);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateY(-14px);
+    }
+}
+
+
+/* =========================================================
+   TABLET RESPONSIVENESS
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    [data-testid="stMainBlockContainer"] {
+        padding-inline: 1.5rem;
+    }
+
+
+    .st-key-overview_hero {
+        min-height: auto;
+
+        padding: 3rem 2.4rem;
+    }
+
+
+    .hero-title {
+        font-size: clamp(2.8rem, 6vw, 4.4rem);
+    }
+
+
+    .hero-logo-area {
+        min-height: 400px;
+    }
+
+
+    .hero-logo-orbit-one {
+        width: 330px;
+        height: 330px;
+    }
+
+
+    .hero-logo-orbit-two {
+        width: 260px;
+        height: 260px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE RESPONSIVENESS
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    [data-testid="stMainBlockContainer"] {
+        padding-top: 0.8rem;
+        padding-inline: 1rem;
+    }
+
+
+    .st-key-overview_hero {
+        min-height: auto;
+
+        margin-top: 0.25rem;
+        padding: 2.2rem 1.25rem;
+
+        border-radius: 22px;
+    }
+
+
+    .st-key-overview_hero [data-testid="stHorizontalBlock"] {
+        gap: 0.5rem;
+    }
+
+
+    .hero-copy {
+        max-width: 100%;
+
+        text-align: center;
+    }
+
+
+    .hero-eyebrow {
+        margin-inline: auto;
+        margin-bottom: 1.2rem;
+
+        font-size: 0.64rem;
+        letter-spacing: 0.115em;
+    }
+
+
+    .hero-title {
+        margin-bottom: 1.15rem;
+
+        font-size: clamp(2.5rem, 11vw, 3.7rem);
+        line-height: 1.02;
+    }
+
+
+    .hero-description {
+        max-width: 540px;
+
+        margin-inline: auto;
+
+        font-size: 0.97rem;
+        line-height: 1.7;
+    }
+
+
+    .st-key-overview_hero
+    .st-key-hero_prediction_button {
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+    }
+
+
+    .st-key-overview_hero
+    .st-key-hero_prediction_button
+    button {
+        width: min(100%, 290px);
+    }
+
+
+    .hero-supporting-text {
+        justify-content: center;
+
+        margin-top: 0.4rem;
+    }
+
+
+    .hero-logo-area {
+        min-height: 330px;
+
+        margin-top: 0.8rem;
+    }
+
+
+    .hero-logo-float {
+        width: min(72%, 290px);
+    }
+
+
+    .hero-logo-glow {
+        width: min(80%, 285px);
+    }
+
+
+    .hero-logo-orbit-one {
+        width: 270px;
+        height: 270px;
+    }
+
+
+    .hero-logo-orbit-two {
+        width: 210px;
+        height: 210px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE DEVICES
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    [data-testid="stMainBlockContainer"] {
+        padding-inline: 0.7rem;
+    }
+
+
+    .st-key-overview_hero {
+        padding: 1.8rem 1rem;
+
+        border-radius: 18px;
+    }
+
+
+    .hero-eyebrow {
+        padding: 0.48rem 0.7rem;
+
+        font-size: 0.58rem;
+        letter-spacing: 0.085em;
+    }
+
+
+    .hero-eyebrow-dot {
+        width: 6px;
+        height: 6px;
+    }
+
+
+    .hero-title {
+        font-size: clamp(2.15rem, 12vw, 3rem);
+    }
+
+
+    .hero-description {
+        font-size: 0.91rem;
+        line-height: 1.65;
+    }
+
+
+    .hero-logo-area {
+        min-height: 280px;
+    }
+
+
+    .hero-logo-float {
+        width: min(72%, 230px);
+    }
+
+
+    .hero-logo-glow {
+        width: min(82%, 235px);
+    }
+
+
+    .hero-logo-orbit-one {
+        width: 220px;
+        height: 220px;
+    }
+
+
+    .hero-logo-orbit-two {
+        width: 175px;
+        height: 175px;
+    }
+
+
+    .hero-supporting-text {
+        flex-direction: column;
+        gap: 0.3rem;
+    }
+
+
+    .hero-support-divider {
+        display: none;
+    }
+}
+
+/* =========================================================
+   SAFE GLOBAL RESPONSIVE FIXES
+   These rules do not force Streamlit columns to stack.
+   ========================================================= */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body,
+[data-testid="stAppViewContainer"],
+[data-testid="stMain"],
+[data-testid="stMainBlockContainer"] {
+    max-width: 100%;
+}
+
+/* Shared page width */
+.block-container,
+[data-testid="stMainBlockContainer"] {
+    width: 100%;
+    max-width: 1400px;
+    margin-inline: auto;
+    padding-left: clamp(0.75rem, 3vw, 2rem);
+    padding-right: clamp(0.75rem, 3vw, 2rem);
+}
+
+/* Keep normal page headings responsive without touching custom hero text */
+[data-testid="stMainBlockContainer"] h1:not(.hero-title) {
+    font-size: clamp(2.1rem, 4.5vw, 4rem);
+    line-height: 1.1;
+}
+
+[data-testid="stMainBlockContainer"] h2 {
+    font-size: clamp(1.55rem, 3vw, 2.35rem);
+    line-height: 1.2;
+}
+
+[data-testid="stMainBlockContainer"] h3 {
+    font-size: clamp(1.2rem, 2.2vw, 1.75rem);
+    line-height: 1.3;
+}
+
+/* Media */
+[data-testid="stMainBlockContainer"] img,
+[data-testid="stMainBlockContainer"] canvas,
+[data-testid="stMainBlockContainer"] video,
+[data-testid="stMainBlockContainer"] iframe {
+    max-width: 100%;
+    height: auto;
+}
+
+[data-testid="stImage"],
+[data-testid="stImageContainer"],
+[data-testid="stPlotlyChart"],
+[data-testid="stVegaLiteChart"],
+[data-testid="stPyplot"],
+[data-testid="stGraphVizChart"] {
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+/* Prevent content inside columns from overflowing */
+[data-testid="stMainBlockContainer"] [data-testid="column"] {
+    min-width: 0;
+}
+
+/* Tables and dataframes */
+[data-testid="stDataFrame"],
+[data-testid="stDataEditor"],
+[data-testid="stTable"],
+[data-testid="stDataFrameResizable"] {
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+[data-testid="stDataFrame"],
+[data-testid="stDataEditor"],
+[data-testid="stTable"] {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Forms and inputs */
+[data-testid="stForm"],
+[data-testid="stTextInput"],
+[data-testid="stNumberInput"],
+[data-testid="stSelectbox"],
+[data-testid="stMultiSelect"],
+[data-testid="stSlider"],
+[data-testid="stTextArea"],
+[data-testid="stDateInput"],
+[data-testid="stTimeInput"],
+[data-testid="stFileUploader"] {
+    width: 100%;
+    max-width: 100%;
+}
+
+/* Cards */
+[data-testid="stMetric"],
+[data-testid="stAlert"],
+[data-testid="stExpander"] {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+}
+
+/* Buttons */
+.stButton > button,
+[data-testid="stFormSubmitButton"] > button,
+[data-testid="stDownloadButton"] > button,
+[data-testid="stLinkButton"] > a {
+    max-width: 100%;
+    white-space: normal;
+}
+
+/* Tablet */
+@media (max-width: 1100px) {
+    .block-container,
+    [data-testid="stMainBlockContainer"] {
+        padding-left: 1.1rem;
+        padding-right: 1.1rem;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .block-container,
+    [data-testid="stMainBlockContainer"] {
+        padding-top: 0.8rem;
+        padding-left: 0.85rem;
+        padding-right: 0.85rem;
+        padding-bottom: 2.5rem;
+    }
+
+    [data-testid="stForm"] {
+        padding: 1rem;
+        border-radius: 15px;
+    }
+
+    [data-testid="stMetric"] {
+        min-height: 105px;
+        padding: 1rem;
+    }
+
+    /* Only form/action buttons become full width */
+    [data-testid="stFormSubmitButton"],
+    [data-testid="stDownloadButton"] {
+        width: 100%;
+    }
+
+    [data-testid="stFormSubmitButton"] > button,
+    [data-testid="stDownloadButton"] > button {
+        width: 100%;
+    }
+
+    [data-testid="stDataFrame"],
+    [data-testid="stDataEditor"],
+    [data-testid="stTable"] {
+        border-radius: 12px;
+    }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+    .block-container,
+    [data-testid="stMainBlockContainer"] {
+        padding-left: 0.65rem;
+        padding-right: 0.65rem;
+    }
+
+    [data-testid="stMetric"] {
+        min-height: 96px;
+        padding: 0.85rem;
+    }
+}
+
+/* Touch devices */
+@media (hover: none) and (pointer: coarse) {
+    .stButton > button,
+    [data-testid="stFormSubmitButton"] > button,
+    [data-testid="stDownloadButton"] > button,
+    [data-testid="stLinkButton"] > a {
+        min-height: 48px;
+    }
+
+    .stButton > button:hover,
+    [data-testid="stFormSubmitButton"] > button:hover {
+        transform: none;
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION ACCESSIBILITY
+   ========================================================= */
+/*
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+
+    .hero-logo-float,
+    .hero-logo-tilt,
+    .hero-logo-glow,
+    .hero-logo-grid,
+    .hero-logo-orbit,
+    .hero-floating-particle,
+    .hero-eyebrow-dot {
+        animation: none !important;
+    }
+
+
+    .hero-logo-float,
+    .hero-logo-tilt {
+        transform: none;
+    }
+
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+    }
+}*/
+
+/* =========================================================
+   MOBILE ALIGNMENT + TEXT CLIPPING FIX
+   Keep this section at the very end of main.css
+   ========================================================= */
+
+/* Streamlit's top toolbar is fixed, so page content needs clearance */
+[data-testid="stMainBlockContainer"] {
+    overflow: visible !important;
+}
+
+/* Never clip headings or their Streamlit wrappers */
+[data-testid="stHeading"],
+[data-testid="stHeadingWithActionElements"],
+[data-testid="stMarkdownContainer"] {
+    max-width: 100%;
+    overflow: visible !important;
+}
+
+[data-testid="stMainBlockContainer"] h1,
+[data-testid="stMainBlockContainer"] h2,
+[data-testid="stMainBlockContainer"] h3 {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    padding-top: 0.08em;
+    padding-bottom: 0.08em;
+    overflow: visible !important;
+    text-wrap: balance;
+}
+
+/* Long text must wrap instead of moving outside the screen */
+[data-testid="stMainBlockContainer"] p,
+[data-testid="stMainBlockContainer"] li,
+[data-testid="stMainBlockContainer"] label,
+[data-testid="stMainBlockContainer"] span {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    word-break: normal;
+}
+
+/* Keep all Streamlit content within the viewport */
+[data-testid="stMainBlockContainer"] [data-testid="stVerticalBlock"],
+[data-testid="stMainBlockContainer"] [data-testid="stHorizontalBlock"],
+[data-testid="stMainBlockContainer"] [data-testid="column"],
+[data-testid="stMainBlockContainer"] [data-testid="stElementContainer"] {
+    max-width: 100%;
+}
+
+/* Tables scroll horizontally instead of cutting off columns */
+[data-testid="stDataFrame"],
+[data-testid="stDataEditor"],
+[data-testid="stTable"] {
+    overflow-x: auto !important;
+    overscroll-behavior-x: contain;
+    scrollbar-width: thin;
+}
+
+/* Ensure chart/image wrappers do not exceed the viewport */
+[data-testid="stImage"],
+[data-testid="stImageContainer"],
+[data-testid="stPyplot"],
+[data-testid="stPlotlyChart"],
+[data-testid="stVegaLiteChart"] {
+    overflow: hidden;
+}
+
+/* ---------------------------------------------------------
+   PHONE LAYOUT
+   --------------------------------------------------------- */
+@media (max-width: 768px) {
+
+    /* Extra top space prevents the first title from hiding behind toolbar */
+    .block-container,
+    [data-testid="stMainBlockContainer"] {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        padding-top: 2.35rem !important;
+        padding-right: 0.85rem !important;
+        padding-bottom: 3rem !important;
+        padding-left: 0.85rem !important;
+    }
+
+    /* Normal page headings—not custom hero title */
+    [data-testid="stMainBlockContainer"] h1:not(.hero-title) {
+        margin-top: 0 !important;
+        margin-bottom: 0.75rem;
+        font-size: clamp(2rem, 10vw, 2.8rem) !important;
+        line-height: 1.12 !important;
+        letter-spacing: -0.035em;
+    }
+
+    [data-testid="stMainBlockContainer"] h2 {
+        font-size: clamp(1.45rem, 7.5vw, 2rem) !important;
+        line-height: 1.2 !important;
+    }
+
+    [data-testid="stMainBlockContainer"] h3 {
+        font-size: clamp(1.15rem, 6vw, 1.5rem) !important;
+        line-height: 1.28 !important;
+    }
+
+    /* Do not globally stack or resize custom page layouts.
+       Only keep existing Streamlit columns inside the viewport. */
+    [data-testid="stMainBlockContainer"] [data-testid="stHorizontalBlock"] {
+        width: 100%;
+        max-width: 100%;
+        gap: 0.8rem;
+    }
+
+    [data-testid="stMainBlockContainer"] [data-testid="column"] {
+        min-width: 0 !important;
+        max-width: 100% !important;
+    }
+
+    /* Form content */
+    [data-testid="stForm"] {
+        width: 100%;
+        max-width: 100%;
+        padding: 0.9rem !important;
+    }
+
+    /* Inputs */
+    [data-baseweb="input"],
+    [data-baseweb="select"],
+    [data-baseweb="textarea"],
+    [data-testid="stNumberInput"],
+    [data-testid="stTextInput"],
+    [data-testid="stSelectbox"],
+    [data-testid="stMultiSelect"] {
+        width: 100%;
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    /* Dataframes */
+    [data-testid="stDataFrame"],
+    [data-testid="stDataEditor"],
+    [data-testid="stTable"] {
+        width: 100% !important;
+        max-width: calc(100vw - 1.7rem) !important;
+    }
+
+    /* Alerts */
+    [data-testid="stAlert"] {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    [data-testid="stAlert"] p {
+        font-size: 0.82rem;
+        line-height: 1.55;
+    }
+}
+
+/* ---------------------------------------------------------
+   VERY SMALL PHONES
+   --------------------------------------------------------- */
+@media (max-width: 420px) {
+
+    .block-container,
+    [data-testid="stMainBlockContainer"] {
+        padding-top: 2.15rem !important;
+        padding-right: 0.65rem !important;
+        padding-left: 0.65rem !important;
+    }
+
+    [data-testid="stMainBlockContainer"] h1:not(.hero-title) {
+        font-size: clamp(1.85rem, 10.5vw, 2.45rem) !important;
+    }
+
+    [data-testid="stMainBlockContainer"] p {
+        font-size: 0.88rem;
+        line-height: 1.65;
+    }
+
+    [data-testid="stDataFrame"],
+    [data-testid="stDataEditor"],
+    [data-testid="stTable"] {
+        max-width: calc(100vw - 1.3rem) !important;
+    }
+}
+
+/* =========================================================
+   STANDARD PAGE TITLE CLEARANCE
+   Used by Prediction.py and Model_Analysis.py
+   ========================================================= */
+
+.page-title-spacer {
+    display: block;
+    width: 100%;
+    height: 0.75rem;
+    pointer-events: none;
+}
+
+@media (max-width: 768px) {
+    .page-title-spacer {
+        height: 2.25rem;
+    }
+
+    /* Extra protection against Streamlit toolbar overlap */
+    [data-testid="stMainBlockContainer"]
+    .page-title-spacer
+    + [data-testid="stHeading"] {
+        overflow: visible !important;
+    }
+}
+
+@media (max-width: 420px) {
+    .page-title-spacer {
+        height: 2.5rem;
+    }
+}
